@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta name="Author" content="Arjun Variar">
+	<meta name="Version" content="1.0.10">
+	<meta name="City" content="Hyderabad">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>
+		$(window).load(function () {
+			findMyDistanceFromThePoles();
+		});
+		function findMyDistanceFromThePoles() {
+		navigator.geolocation.getCurrentPosition(doSomethingWithIt);
+		}
+
+		function doSomethingWithIt(result) {
+			console.log(result);
+			x2 = result.coords.latitude.toRad();
+			y2 = result.coords.longitude.toRad();
+			x1 = 17.385044.toRad();
+			y1 = 78.486671.toRad();
+			h = haverSine(x2-x1) + (Math.cos(x1) * Math.cos(x2) * haverSine(y2-y1));
+			realDistance = findRealDistance(h);
+			$("p").html("The Distance of your nearest router to Arjun Variar's (around +-2kms both sides unless you are using a proxy) is "+ realDistance + " km with an max error of "+realDistance * 0.005+" km.")
+		}
+
+		function haverSine(theta) {
+			return Math.pow(Math.sin(theta/2),2) ;
+		}
+
+		function findRealDistance(haverSineDistance) {
+			Radius = 6371
+			return 2 * Radius * Math.asin(Math.sqrt(haverSineDistance))
+		}
+
+		Number.prototype.toRad = function() {
+			return this * Math.PI / 180;
+		};
+	</script>
+	<title>GeoLocation</title>
+</head>
+<body>
+	<p></p>
+</body>
+</html>
