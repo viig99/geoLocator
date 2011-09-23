@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta name="Author" content="Arjun Variar">
+	<meta name="Version" content="1.0.0">
+	<meta name="City" content="Hyderabad">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>
+		$(window).load(function () {
+			findMyDistanceFromThePoles();
+		});
+		function findMyDistanceFromThePoles() {
+		navigator.geolocation.getCurrentPosition(doSomethingWithIt);
+		}
+
+		function doSomethingWithIt(result) {
+			console.log(result);
+			x2 = result.coords.latitude;
+			y2 = result.coords.longitude;
+			x1 = 17.385044;
+			y1 = 78.486671;
+			h = haverSine(x2-x1) + (Math.cos(x1) * Math.cos(x2) * haverSine(y2-y1));
+			realDistance = findRealDistance(h);
+			$("p").html("Latitude: "+x2+" and Longitude: "+y2)
+		}
+
+		function haverSine(theta) {
+			return Math.sin(theta/2) * Math.sin(theta/2);
+		}
+
+		function findRealDistance(haverSineDistance) {
+			Radius = 6371
+			return 2 * Radius * Math.asin(Math.sqrt(haverSineDistance))
+		}
+	</script>
+	<title>GeoLocation</title>
+</head>
+<body>
+	<p></p>
+</body>
+</html>
