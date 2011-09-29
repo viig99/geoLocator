@@ -2,7 +2,7 @@ My first pet project to get a fully functional social geoLocation based app. I a
 Soon Plan to shift it to Vincenty's formulae for greater accuracy.
 
 >TODO
-Implement Location Saving to file
-Finding Mean distances
-Plotting the Locations
+Implement Location Saving to file/database.
+Finding Mean distances with friends location(a weighted mean).
+Plotting the Locations with google API.
 Social Locaters with facebook integeration.
