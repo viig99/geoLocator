@@ -1,2 +1,8 @@
 My first pet project to get a fully functional social geoLocation based app. I am currently using the haversine function to calculate the distances between two points.
 Soon Plan to shift it to Vincenty's formulae for greater accuracy.
+
+>TODO
+Implement Location Saving to file
+Finding Mean distances
+Plotting the Locations
+Social Locaters with facebook integeration.
