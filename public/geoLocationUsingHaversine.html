@@ -3,11 +3,18 @@
 	<meta name="Author" content="Arjun Variar">
 	<meta name="Version" content="1.0.10">
 	<meta name="City" content="Hyderabad">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script>
 		$(window).load(function () {
-			findMyDistanceFromThePoles();
+			$("#ele2").hide();
 		});
+		function onButtonClickFunction() {
+			$("#orangeButton").hide();
+			$("#ele2").show();
+			findMyDistanceFromThePoles();
+		}
+
 		function findMyDistanceFromThePoles() {
 		navigator.geolocation.getCurrentPosition(doSomethingWithIt);
 		}
@@ -16,11 +23,13 @@
 			console.log(result);
 			x2 = result.coords.latitude.toRad();
 			y2 = result.coords.longitude.toRad();
-			x1 = 17.385044.toRad();
-			y1 = 78.486671.toRad();
+			x1 = 0;
+			y1 = 0;
+			//x1 = 17.385044.toRad();     //Arjun's Lat
+			//y1 = 78.486671.toRad();	  //Arjun's Long
 			h = haverSine(x2-x1) + (Math.cos(x1) * Math.cos(x2) * haverSine(y2-y1));
 			realDistance = findRealDistance(h);
-			$("p").html("The Distance of your nearest router to Arjun Variar's (around +-2kms both sides unless you are using a proxy) is "+ realDistance + " km with an max error of "+realDistance * 0.005+" km.")
+			$("#ele2").html(realDistance.toFixed(2) + " km with an max error of "+(realDistance * 0.005).toFixed(2)+" km.")
 		}
 
 		function haverSine(theta) {
@@ -39,6 +48,8 @@
 	<title>GeoLocation</title>
 </head>
 <body>
-	<p></p>
+	<div id="ele1" class="grass">Want to know your distance from the North Pole?</div>
+	<div id="ele2" class="rback"></div>
+	<input type="button" id="orangeButton" class="orangeButton" value="Sure!" placeholder="" onclick="onButtonClickFunction();">
 </body>
 </html>

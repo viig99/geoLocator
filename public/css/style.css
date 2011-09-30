@@ -1,25 +1,45 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-  border: 0 none;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
+html, body {
+	color: #afafaf;
+	background-color: rgb(40,40,40);
 }
 
-body, input, textarea, .page-title span, .pingback a.url {
-  font-family: Georgia,"Bitstream Charter",serif;
-}
 body {
-	background-image: url("images/bg.gif");
-	background-repeat: repeat;
-	 /*scroll 0 0 transparent*/
+	font: 75%/1.5em "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	text-shadow: #000 0px 0px 0px;
 }
 
-body, input, textarea {
-  color: #666666;
-  font-size: 12px;
-  line-height: 18px;
+.grass {
+	font-size: 44;
+	font-family: Walkway !important;
+	font-weight: bold; 
+	color: white;
+	margin-top: 10%;
+	text-align: center; 
 }
 
-p {
-	
+.rback {
+	font-size: 24;
+	font-family: Walkway !important;
+	color: white;
+	font-weight: bold;
+	margin-top: 4%;
+	text-align: center;
+}
+
+.orangeButton {
+	font-size: 24;
+	font-family: Walkway !important;
+	font-weight: bold; 
+	color: white;
+	align: center;
+	margin: 4% 45% 0% 45%;
+	/*color: #fef4e9;*/
+	height: 50px;
+	width: 100px ;
+	border: solid 1px #da7c0c;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
 }
