@@ -1,9 +1,12 @@
 html, body {
 	color: #afafaf;
-	background-color: rgb(40,40,40);
+	background-color: rgb(40,40,40);	
+	background-image: url("../images/body.jpg") !important;
+	background-repeat: repeat;
 }
 
 body {
+	/*scroll 0 0 black*/
 	font: 75%/1.5em "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 	text-shadow: #000 0px 0px 0px;
 }
@@ -12,7 +15,7 @@ body {
 	font-size: 44;
 	font-family: Walkway !important;
 	font-weight: bold; 
-	color: white;
+	color: #E4F6F8;
 	margin-top: 10%;
 	text-align: center; 
 }
@@ -20,7 +23,7 @@ body {
 .rback {
 	font-size: 24;
 	font-family: Walkway !important;
-	color: white;
+	color: #62C2CC;
 	font-weight: bold;
 	margin-top: 4%;
 	text-align: center;
