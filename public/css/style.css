@@ -1,0 +1,25 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body, input, textarea, .page-title span, .pingback a.url {
+  font-family: Georgia,"Bitstream Charter",serif;
+}
+body {
+	background-image: url("images/bg.gif");
+	background-repeat: repeat;
+	 /*scroll 0 0 transparent*/
+}
+
+body, input, textarea {
+  color: #666666;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+p {
+	
+}
